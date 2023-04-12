@@ -19,12 +19,9 @@ if (formValues) {
 
 function onFormSubmit(evt) {
   evt.preventDefault();
-  evt.currentTarget.reset();
   localStorage.removeItem(keyFeedbackForm);
-
-
-
   console.log(formValues);
+  evt.currentTarget.reset();
   
 }
 
