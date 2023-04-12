@@ -17,7 +17,7 @@ if (formValues) {
   message.value = formValues.message;
 }
 
-function onFormSubmit(evt) {
+function submitOn(evt) {
   evt.preventDefault();
   localStorage.removeItem(keyFeedbackForm);
   console.log(formValues);
@@ -26,7 +26,7 @@ function onFormSubmit(evt) {
 }
 
 form.addEventListener('input', onFormInput);
-form.addEventListener('submit', onFormSubmit);
+form.addEventListener('submit', submitOn);
 
 
 
