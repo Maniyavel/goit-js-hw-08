@@ -4,9 +4,6 @@ const form=document.querySelector(".feedback-form")
 const keyFeedbackForm='feedback-form-state';
 let formValues = JSON.parse(localStorage.getItem(keyFeedbackForm));
 
-form.addEventListener('input', onFormInput);
-form.addEventListener('submit', onFormSubmit);
-
 
 const { email, message } = form.elements;
 
@@ -30,6 +27,9 @@ function onFormSubmit(evt) {
   console.log(formValues);
   
 }
+
+form.addEventListener('input', onFormInput);
+form.addEventListener('submit', onFormSubmit);
 
 
 
