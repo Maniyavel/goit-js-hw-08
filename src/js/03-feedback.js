@@ -22,7 +22,9 @@ function submitOn(evt) {
   localStorage.removeItem(keyFeedbackForm);
   console.log(formValues);
   evt.currentTarget.reset();
-  
+  if (email.value===""||message.value===""){
+    return alert('всі поля повинні бути заповнені');
+  }
 }
 
 form.addEventListener('input', onFormInput);
